@@ -1,18 +1,18 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import {
   Calendar,
+  ChevronDown,
   Home,
   Inbox,
+  Menu,
+  MoreHorizontal,
+  Plus,
   Search,
   Settings,
-  Settings2,
-  ChevronDown,
-  Plus,
-  Menu,
-  MoreHorizontal
+  Settings2
 } from 'lucide-react'
 
 import {
@@ -20,19 +20,19 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
-  SidebarHeader,
+  SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
+  SidebarMenuAction,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   // SidebarRail,
-  SidebarGroupAction,
-  SidebarMenuAction,
   SidebarMenuSub,
-  SidebarMenuSubItem,
   SidebarMenuSubButton,
-  SidebarMenuBadge,
+  SidebarMenuSubItem,
   SidebarSeparator,
   SidebarTrigger,
   useSidebar
@@ -40,15 +40,15 @@ import {
 
 import {
   Collapsible,
-  CollapsibleTrigger,
-  CollapsibleContent
+  CollapsibleContent,
+  CollapsibleTrigger
 } from '@/components/Collapsible'
 
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuItem
+  DropdownMenuItem,
+  DropdownMenuTrigger
 } from '@/components/Dropdown'
 
 import { ThemeToggle } from '@/components'
@@ -57,6 +57,9 @@ import {
   SIDEBAR_WIDTH,
   SIDEBAR_WIDTH_MOBILE
 } from '@/components/Sidebar/SidebarConstants'
+
+import { SIDEBAR_ZINDEX_CLASS } from '@/components/component-constants'
+import { cn } from '@/utils'
 
 const items = [
   {
@@ -85,9 +88,6 @@ const items = [
     icon: Settings
   }
 ]
-
-import { SIDEBAR_ZINDEX_CLASS } from '@/components/component-constants'
-import { cn } from '@/utils'
 
 /* ========================================================================
 
@@ -120,7 +120,7 @@ export const AppSidebar = () => {
 
   useEffect(() => {
     if (isOpen === false) {
-      setCollapsibleOpen(false)
+      setCollapsibleOpen(false) // eslint-disable-line
     }
   }, [isOpen])
 
@@ -145,7 +145,7 @@ export const AppSidebar = () => {
             <SidebarMenuSub>
               <SidebarMenuSubItem>
                 <SidebarMenuSubButton asChild>
-                  <a href='#!' className='text-[inherit]'>
+                  <a href='#!' className='text-inherit'>
                     <span>Subitem 1</span>
                   </a>
                 </SidebarMenuSubButton>
@@ -153,7 +153,7 @@ export const AppSidebar = () => {
 
               <SidebarMenuSubItem>
                 <SidebarMenuSubButton asChild>
-                  <a href='#!' className='text-[inherit]'>
+                  <a href='#!' className='text-inherit'>
                     <span>Subitem 2</span>
                   </a>
                 </SidebarMenuSubButton>
@@ -161,7 +161,7 @@ export const AppSidebar = () => {
 
               <SidebarMenuSubItem>
                 <SidebarMenuSubButton asChild>
-                  <a href='#!' className='text-[inherit]'>
+                  <a href='#!' className='text-inherit'>
                     <span>Subitem 3</span>
                   </a>
                 </SidebarMenuSubButton>
@@ -254,7 +254,7 @@ export const AppSidebar = () => {
 
                   tooltip='This is a tooltip!'
                 >
-                  <a href={item.url} className='text-[inherit]'>
+                  <a href={item.url} className='text-inherit'>
                     <item.icon />
                     <span>{item.title}</span>
                   </a>

@@ -1,12 +1,12 @@
 'use client'
 
 import * as React from 'react'
-import { SidebarTrigger } from './SidebarTrigger'
-import { AppSidebar } from '@/components/AppSidebar'
-import { useSidebar } from './SidebarProvider'
-import { cn } from '@/utils'
-
 import { SIDEBAR_TRIGGER_ZINDEX_CLASS } from '../component-constants'
+import { useSidebar } from './SidebarProvider'
+import type { SidebarTrigger } from './SidebarTrigger'
+import type { AppSidebar } from '@/components/AppSidebar'
+
+import { cn } from '@/utils'
 
 type SidebarFlipperProps = {
   children: React.ReactNode

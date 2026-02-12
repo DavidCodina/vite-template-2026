@@ -1,12 +1,12 @@
 'use client'
 
-export const SIDEBAR_WIDTH: string = '300px'
-export const SIDEBAR_WIDTH_MOBILE: string = '300px'
+export const SIDEBAR_WIDTH = '300px'
+export const SIDEBAR_WIDTH_MOBILE = '300px'
 
 // This controls the width of the collapsed sidebar when collapsible='icon'.
 // Using a number kind of seems like it works, but it breaks the position of
 // the SidbarTrigger. Use a string value.
-export const SIDEBAR_WIDTH_ICON: string = '48px'
+export const SIDEBAR_WIDTH_ICON = '48px'
 
 // The SIDEBAR_KEYBOARD_SHORTCUT variable is used to set the keyboard
 // shortcut used to open and close the sidebar. To trigger the sidebar,

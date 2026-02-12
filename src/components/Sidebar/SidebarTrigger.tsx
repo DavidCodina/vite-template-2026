@@ -2,15 +2,15 @@
 
 import * as React from 'react'
 import {
-  PanelLeftIcon,
-  PanelRightIcon,
   PanelLeftClose,
-  PanelRightClose
-  // XIcon
+  PanelLeftIcon,
+  PanelRightClose,
+  PanelRightIcon
 } from 'lucide-react'
-import { cn } from '@/utils'
-import { Button } from '@/components'
 import { useSidebar } from './SidebarProvider'
+import type { Button } from '@/components'
+
+import { cn } from '@/utils'
 
 type SidebarTriggerProps = React.ComponentProps<typeof Button>
 

@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { cn } from '@/utils'
+
 import { Separator } from '@/components/Separator'
+import { cn } from '@/utils'
 
 /* ========================================================================
 
@@ -20,7 +21,7 @@ function SidebarSeparator({
       data-sidebar='separator'
       // The original ShadCN used 'mx-2 w-auto', but that wasn't effective.
       className={cn(
-        'bg-sidebar-border mx-auto max-w-[calc(100%_-_var(--spacing)_*_4)]',
+        'bg-sidebar-border mx-auto max-w-[calc(100%-var(--spacing)*4)]',
         className
       )}
       {...props}

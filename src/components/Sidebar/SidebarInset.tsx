@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { cn } from '@/utils'
 import { useSidebar } from './SidebarProvider'
+import { cn } from '@/utils'
 
 // Switched from 'main' to 'div' because the <Page> component uses <main> already.
 type SidebarInsetProps = React.ComponentProps<'div'>
