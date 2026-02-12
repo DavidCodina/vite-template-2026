@@ -1,4 +1,9 @@
 import { HR, Page, PageContainer } from '@/components'
+import {
+  // TableDemo1,
+  // TableDemo2,
+  TableDemo3
+} from '@/components/Table/demos'
 
 /* ========================================================================
 
@@ -34,6 +39,8 @@ const PageTest = () => {
               zIndex: 2
             }}
           />
+
+          <TableDemo3 />
         </PageContainer>
       </Page>
     </>
