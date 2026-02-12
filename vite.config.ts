@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite'
 ======================================================================== */
 
 export default defineConfig({
-  base: '/vite-template-2026/',
+  //! base: '/vite-template-2026/',
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   server: {
     port: 3000
