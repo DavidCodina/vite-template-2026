@@ -67,7 +67,6 @@ export const MainLayout = () => {
           {
             // '--sidebar-width': '20rem',
             // '--sidebar-width-mobile': '20rem'
-            marginBottom: 250
           } as CSSProperties
         }
 

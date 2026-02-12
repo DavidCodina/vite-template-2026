@@ -51,18 +51,12 @@ const Page = ({
         {...otherProps}
       >
         {children}
-
-        <div
-          // Either self-end or mt-auto on its own would push
-          // the element down in the absence of content.
-          className='mt-auto h-0 w-full self-end'
-        />
       </main>
     </>
   )
 }
 
-// Again, <Page.Container> will not work directly within a server component,
+// <Page.Container> will not work directly within a server component,
 // but will work when wrapped in another client component.
 const CompoundComponent = Object.assign(Page, {
   Container: PageContainer

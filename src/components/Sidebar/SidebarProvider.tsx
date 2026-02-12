@@ -201,8 +201,8 @@ function SidebarProvider({
             ...style
           } as React.CSSProperties
         }
-        //^ Originally, min-h-svh was used, but I switched to min-h-dvh in August 2025.
-        //^ Definitely, don't use min-h-screen, but I think svh can also be problematic on mobile.
+        // Originally, min-h-svh was used. Switched to min-h-dvh.
+        // svh can also be problematic on mobile.
         className={cn(
           'group/sidebar-wrapper group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-dvh w-full',
           className
