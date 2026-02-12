@@ -1,11 +1,9 @@
 import { HR, Page, PageContainer } from '@/components'
-// import {
-//   // TableDemo1,
-//   // TableDemo2,
-//   TableDemo3
-// } from '@/components/Table/demos'
-
-import { SonnerDemo } from '@/components/Sonner/SonnerDemo'
+import {
+  // TableDemo1,
+  // TableDemo2,
+  TableDemo3
+} from '@/components/Table/demos'
 
 /* ========================================================================
 
@@ -42,8 +40,7 @@ const PageTest = () => {
             }}
           />
 
-          {/* <TableDemo3 /> */}
-          <SonnerDemo />
+          <TableDemo3 />
         </PageContainer>
       </Page>
     </>
