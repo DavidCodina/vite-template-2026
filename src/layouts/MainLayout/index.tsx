@@ -53,6 +53,7 @@ export const MainLayout = () => {
       to implement the optional 'persisted State' feature with cookies. */}
 
       <SidebarProvider
+        defaultOpen={false}
         // defaultSide='right'
         defaultCollapsible='icon'
         // defaultVariant='inset'
