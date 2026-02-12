@@ -8,4 +8,6 @@ import { routes } from './routes'
                                 router                 
 ======================================================================== */
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes, {
+  basename: '/vite-template-2026'
+})
