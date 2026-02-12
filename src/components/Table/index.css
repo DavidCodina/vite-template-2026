@@ -42,7 +42,7 @@ Tailwind plugin. */
 .shadcn-table-container {
   border: 1px solid var(--table-border-color);
   overflow-x: auto;
-  postion: relative;
+  position: relative;
   width: 100%;
 }
 
