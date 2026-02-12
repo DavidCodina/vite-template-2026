@@ -6,9 +6,8 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "homepage": "https://davidcodina.github.io/vite-template-2026/",
   "scripts": {
-    "note": "homepage, predeploy, and deploy are for gh-pages. Delete them if you don't need them.",
+    "note": "predeploy, and deploy are for gh-pages. Delete them if you don't need them.",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
