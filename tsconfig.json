@@ -1,0 +1,93 @@
+// Vite now splits the tsconfig.json into this + tsconfig.app.json + tsconfig.node.json
+// This ends up creating problems, so I still prefer having a single tssconfig.json.
+
+{
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+    // "eslint.config.ts",   // ❌ Redundant
+    // "prettier.config.ts", // ❌ Redundant
+    // "vite.config.ts"      // ❌ Redundant
+  ],
+  "compilerOptions": {
+    "target": "ES2023",
+
+    // https://www.youtube.com/watch?v=OQIsQDFtEnI
+    "useDefineForClassFields": true,
+
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    "noUncheckedIndexedAccess": true, // https://www.youtube.com/watch?v=OQIsQDFtEnI
+
+    "baseUrl": "src",
+    "paths": {
+      // Because we're using tsconfigPaths() in vite.config.ts, this is all we need to do.
+      // However, without tsconfigPaths() one may need to manually add the alias to vite.config.ts:
+      // resolve: { alias: { ... }}
+      "@/*": ["./*"]
+    },
+
+    "allowJs": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    // A newer TypeScript feature that enforces using import statements instead of triple-slash directives.
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Linting */
+    "strict": true,
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    // Warns you when you do create a function that is not used
+    // and not exported:
+    //
+    //   const myFunc = () => null
+    //   const me = 'David'
+    //
+    // However, ESLint already handles this perfectly with pattern matching:
+    //
+    //   '@typescript-eslint/no-unused-vars': [
+    //     'warn',
+    //     {
+    //       argsIgnorePattern: '^_',
+    //       varsIgnorePattern: '^_',
+    //       caughtErrorsIgnorePattern: '^_',
+    //       destructuredArrayIgnorePattern: '^_'
+    //     }
+    //   ]
+    //
+    // For this reason, I'm switching it to false her. So that prepending _ works
+    // everywhere.
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    "noUnusedLocals": false,
+
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    // We don't need this rule either. It would trigger in situations like this:
+    //
+    //   export function add(a: number, b: number) {
+    //     // 'b' is declared but its value is never read.ts(6133)
+    //     return a
+    //   }
+    //
+    // However, it's already covered by eslint@typescript-eslint/no-unused-vars.
+    // And if we wanted to disable the linting rule we'd just make it _b.
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  }
+}
