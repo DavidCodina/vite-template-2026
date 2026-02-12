@@ -42,4 +42,6 @@ export { SidebarInset } from './SidebarInset'
 
 export { SidebarGroupContent } from './SidebarGroupContent'
 
+export { SidebarInput } from './SidebarInput'
+
 export { SidebarGroupLabel } from './SidebarGroupLabel'

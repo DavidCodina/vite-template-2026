@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { useSidebar } from './SidebarProvider'
 import { cn } from '@/utils'
+import { useSidebar } from './SidebarProvider'
 
 /* ========================================================================
 

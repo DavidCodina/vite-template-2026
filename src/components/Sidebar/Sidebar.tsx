@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import { cn } from '@/utils'
 
 import {
   Sheet,
@@ -12,7 +13,6 @@ import {
 
 import { useSidebar } from './SidebarProvider'
 import { SIDEBAR_WIDTH_MOBILE } from './SidebarConstants'
-import { cn } from '@/utils'
 
 type SidebarProps = React.ComponentProps<'div'> & {
   ///////////////////////////////////////////////////////////////////////////

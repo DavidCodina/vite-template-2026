@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { Skeleton } from '../Skeleton'
 import { cn } from '@/utils'
+import { Skeleton } from '../Skeleton'
 
 /* ========================================================================
 

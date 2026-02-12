@@ -1,16 +1,12 @@
 'use client'
 
 import * as React from 'react'
-
+import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 import { Slot } from '@radix-ui/react-slot'
-import { cva } from 'class-variance-authority'
-import { useSidebar } from './SidebarProvider'
-
-import type * as TooltipPrimitive from '@radix-ui/react-tooltip'
-import type { VariantProps } from 'class-variance-authority'
-import { Tooltip } from '@/components/Tooltip'
-
+import { type VariantProps, cva } from 'class-variance-authority'
 import { cn } from '@/utils'
+import { useSidebar } from './SidebarProvider'
+import { Tooltip } from '@/components/Tooltip'
 
 // const hoverMixin = `
 // hover:bg-sidebar-accent hover:text-sidebar-accent-foreground
